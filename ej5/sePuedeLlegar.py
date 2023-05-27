@@ -8,11 +8,13 @@ from typing import Tuple
 def sePuedeLlegar(origen: str, destino: str, vuelos: List[Tuple[str, str]]) -> int :
   cantidad_vuelos = 0
   origen_actual = origen
-  while hayVueloDesdeOrigen(origen_actual, vuelos):
+  destinos_visitados = []
+  while hayVueloDesdeOrigen(origen_actual, vuelos) and origen_actual not in destinos_visitados:
     cantidad_vuelos += 1
     if destinoDesdeOrigen(origen_actual, vuelos) == destino:
       return cantidad_vuelos
     else:
+      destinos_visitados.append(origen_actual)
       origen_actual = destinoDesdeOrigen(origen_actual, vuelos)
   return -1
 
