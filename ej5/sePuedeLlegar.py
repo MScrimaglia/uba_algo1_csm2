@@ -29,10 +29,9 @@ def destinoDesdeOrigen(origen: str, vuelos: List[Tuple[str, str]]) -> Tuple:
       return vuelo[1]
 
 if __name__ == '__main__':
-  """ origen = input()
+  origen = input()
   destino = input()
   vuelos = input()
   
-  print(sePuedeLlegar(origen, destino, [tuple(vuelo.split(',')) for vuelo in vuelos.split()])) """
+  print(sePuedeLlegar(origen, destino, [tuple(vuelo.split(',')) for vuelo in vuelos.split()]))
 
-  print(sePuedeLlegar('madrid','buenos aires', [('madrid', 'barcelona'), ('roma', 'berlin'), ('barcelona', 'roma')]))
